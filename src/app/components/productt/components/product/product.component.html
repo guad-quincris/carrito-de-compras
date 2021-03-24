@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{product.title}}</mat-card-title>
+    <mat-card-subtitle>{{product.sku}}</mat-card-subtitle>
+  </mat-card-header>
+  <div>
+    <img [src]="product.image" alt="img">
+  </div>
+  <mat-card-content>
+    <p>{{product.description}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a  mat-raised-button [routerLink]="['/products', product.id]">ver mas</a>
+    <button mat-raised-button color="primary" (click)="addCart()">add cart</button>
+  </mat-card-actions>
+</mat-card>
+
+
+
+

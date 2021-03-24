@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="row between-xs middle-xs footer">
+
+        <p>Esta es una prueba de carrito de compra</p>
+        <mat-icon
+          class="example-icon"
+          aria-hidden="false"
+          aria-label="Example user verified icon"
+          >verified_user
+        </mat-icon>
+
+
+      <div class="contact">
+        <h3>Contacto</h3>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Ingrese su correo"
+            [formControl]="emailField"
+            type="email"
+          />
+        </mat-form-field>
+        <button
+          class="btn" mat-raised-button
+          [disabled]="emailField.invalid"
+          (click)="(sendEmail)"
+        >
+          Enviar
+        </button>
+        <span class="span"  *ngIf="emailField.invalid">El email, no es valido</span>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
